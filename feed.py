@@ -37,7 +37,7 @@ with open('feed.yaml','r') as file:
 
         enclosure=xml_tree.SubElement(item_element,'enclosure',{
             'url':link_prefix+item['file'],
-            type:'audio/mpeg',
+            'type':'audio/mpeg',
             'length':item['length']
         })
     output_tree=xml_tree.ElementTree(rss_element)
